@@ -1,56 +1,101 @@
-# showroom-carros
+# 🚗 Showroom de Carros
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Este é um projeto simples e funcional de um showroom de carros desenvolvido com [Ember.js](https://emberjs.com/). Ele permite:
 
-## Prerequisites
+- Visualizar uma vitrine de veículos com imagens e detalhes
+- Realizar cadastro e login de usuários
+- Navegar entre páginas com uma interface responsiva e moderna
+- Simular uma sessão com `localStorage`
+- Testar autenticação com opção de logout
 
-You will need the following things properly installed on your computer.
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with npm)
-- [Ember CLI](https://cli.emberjs.com/release/)
-- [Google Chrome](https://google.com/chrome/)
+## ⚙️ Tecnologias Utilizadas
 
-## Installation
+- **Ember.js** (CLI + Router + Services)
+- **HTML/CSS Responsivo** (estilo profissional sem frameworks externos)
+- `localStorage` para simular persistência de sessão
+- Componentização via templates `.hbs`
 
-- `git clone <repository-url>` this repository
-- `cd showroom-carros`
-- `npm install`
+---
 
-## Running / Development
+## 🚀 Como rodar o projeto localmente
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+### 1. Clone o repositório
 
-### Code Generators
+```bash
+git clone https://github.com/seu-usuario/showroom-carros.git
+cd showroom-carros
+````
 
-Make use of the many generators for code, try `ember help generate` for more details
+### 2. Instale as dependências
 
-### Running Tests
+```bash
+npm install
+```
 
-- `npm run test`
-- `npm run test:ember -- --server`
+> Certifique-se de ter o [Node.js](https://nodejs.org/) e o [Ember CLI](https://cli.emberjs.com/release/) instalados:
 
-### Linting
+```bash
+npm install -g ember-cli
+```
 
-- `npm run lint`
-- `npm run lint:fix`
+### 3. Rode o servidor de desenvolvimento
 
-### Building
+```bash
+ember serve
+```
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+Abra no navegador:
+📍 [`http://localhost:4200`](http://localhost:4200)
 
-### Deploying
+---
 
-Specify what it takes to deploy your app.
+## 👥 Funcionalidades
 
-## Further Reading / Useful Links
+* ✅ Navegação com Navbar fixa
+* ✅ Página inicial com showroom de carros (com imagens locais)
+* ✅ Páginas de Login e Cadastro com validação simples
+* ✅ Sessão de usuário simulada com `localStorage`
+* ✅ Página "Sobre Nós" institucional
+* ✅ Layout responsivo adaptado para mobile
 
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+---
+
+## 📁 Estrutura principal
+
+```
+app/
+├── controllers/
+│   ├── application.js
+│   ├── login.js
+│   └── cadastro.js
+├── templates/
+│   ├── application.hbs
+│   ├── login.hbs
+│   ├── cadastro.hbs
+│   ├── carros.hbs
+│   └── sobre.hbs
+├── services/
+│   └── session.js
+├── styles/
+│   └── app.css
+└── router.js
+```
+
+---
+
+## 💡 Sugestões de melhoria futura
+
+* Persistência com backend real (ex: Firebase, Node, Supabase)
+* Upload de imagens dos carros via painel
+* Página de detalhes de cada carro
+* Favoritos/salvar veículos
+
+---
+
+## 🧑‍💻 Autor
+
+**Gabriel Jordão, Bruno Gabriel, Giovanna Gutierrez, Caio Lemes, Danilo, Carol Tagliaferro**
+Projeto educativo desenvolvido com foco em Ember.js, autenticação local e UX responsiva.
+
+---

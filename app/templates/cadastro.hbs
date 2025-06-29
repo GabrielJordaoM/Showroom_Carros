@@ -1,0 +1,22 @@
+<h2>Cadastro</h2>
+
+<form class="form-box" {{on "submit" this.realizarCadastro}}>
+  <label>Nome:</label>
+  <input type="text" name="nome" required />
+
+  <label>Email:</label>
+  <input type="email" name="email" required />
+
+  <label>Senha:</label>
+  <input type="password" name="senha" required />
+
+  <button type="submit">Cadastrar</button>
+
+  {{#if this.erro}}
+    <p class="erro">{{this.erro}}</p>
+  {{/if}}
+
+  {{#if this.sucesso}}
+    <p class="sucesso">{{this.sucesso}}</p>
+  {{/if}}
+</form>

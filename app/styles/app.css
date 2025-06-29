@@ -1,1 +1,225 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+/* Reset e base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f4f6fa;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2 {
+  text-align: center;
+  color: #222;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+/* Navbar refinada */
+.navbar {
+  background-color: #002f67;
+  color: white;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left .logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.navbar a:hover {
+  background-color: #004899;
+}
+
+.logout-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #004899;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+/* Grid de carros */
+.carros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 40px 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carro-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.carro-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.carro-card h3 {
+  font-size: 1.1rem;
+  margin: 12px;
+  color: #002f67;
+}
+
+.carro-card p {
+  margin: 0 12px 12px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Formulários */
+.form-box {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
+}
+
+.form-box label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.2s;
+}
+
+.form-box input:focus {
+  border-color: #07c;
+  outline: none;
+}
+
+.form-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #07c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.form-box button:hover {
+  background: #005fa3;
+}
+
+.form-box .erro {
+  color: #d00000;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.form-box .sucesso {
+  color: #007f00;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Página Sobre Nós */
+.about-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #002f67;
+  text-align: center;
+}
+
+.about-container p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .form-box {
+    margin: 20px 16px;
+  }
+
+  .carros-container {
+    padding: 20px 12px;
+    gap: 16px;
+  }
+}

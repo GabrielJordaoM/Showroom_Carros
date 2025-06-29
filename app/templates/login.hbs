@@ -1,0 +1,15 @@
+<h2>Login</h2>
+
+<form class="form-box" {{on "submit" this.realizarLogin}}>
+  <label>Email:</label>
+  <input type="email" name="email" required />
+
+  <label>Senha:</label>
+  <input type="password" name="senha" required />
+
+  <button type="submit">Entrar</button>
+
+  {{#if this.erro}}
+    <p class="erro">{{this.erro}}</p>
+  {{/if}}
+</form>

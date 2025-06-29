@@ -1,0 +1,9 @@
+<h2>Showroom de Carros</h2>
+
+<ul>
+  {{#each this.model as |carro|}}
+    <li>
+      {{carro.nome}} - {{carro.marca}} ({{carro.ano}})
+    </li>
+  {{/each}}
+</ul>

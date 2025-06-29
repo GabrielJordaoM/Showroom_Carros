@@ -1,0 +1,16 @@
+<h2>Showroom de Carros</h2>
+
+<div class="carros-container">
+  {{#each this.model as |carro|}}
+    <div class="carro-card">
+      <img 
+        src={{carro.imagem}} 
+        alt="Foto do {{carro.nome}}" 
+        onerror="this.src='/img/placeholder.jpg';"
+      />
+      <h3>{{carro.nome}}</h3>
+      <p><strong>Marca:</strong> {{carro.marca}}</p>
+      <p><strong>Ano:</strong> {{carro.ano}}</p>
+    </div>
+  {{/each}}
+</div>

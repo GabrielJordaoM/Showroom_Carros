@@ -1,7 +1,22 @@
-{{page-title "ShowroomCarros"}}
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="/" class="logo">🚗 Showroom</a>
+  </div>
 
-{{outlet}}
+  <div class="navbar-right">
+    <a href="/sobre">ℹ️ Sobre Nós</a>
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+    {{#if this.session.isAuthenticated}}
+      <span class="user-name">Olá, {{this.session.currentUser.nome}}</span>
+      <button class="logout-button" {{on "click" this.logout}}>Sair</button>
+    {{else}}
+      <a href="/login">🔐 Login</a>
+      <a href="/cadastro">📝 Cadastro</a>
+    {{/if}}
+  </div>
+</nav>
+
+
+<main>
+  {{outlet}}
+</main>
