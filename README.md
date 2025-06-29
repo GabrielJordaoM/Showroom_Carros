@@ -96,6 +96,7 @@ app/
 ## 🧑‍💻 Autor
 
 **Gabriel Jordão, Bruno Gabriel, Giovanna Gutierrez, Caio Lemes, Danilo, Carol Tagliaferro**
+
 Projeto educativo desenvolvido com foco em Ember.js, autenticação local e UX responsiva.
 
 ---
